@@ -1,24 +1,62 @@
-import React from 'react'
+import React, { useState } from 'react';
+import { Menu, X } from 'lucide-react';
 
 function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+  const navLinks = ['Home', 'About', 'Services', 'Projects', 'Contact'];
+
   return (
-    <>
-    <nav className='bg-black text-white px-8 md:px-16 lg:px-24'>
-        <div className='container py-2 flex justify-center md:justify-between items-center'>
-        <div className='text-2xl font-bold hidden md:inline'>Anujith</div>
-        <div className='space-x-6'>
-            <a href="#home" className='px-4 py-2 text-white-700 hover:text-white hover:bg-gradient-to-r hover:from-blue-500 hover:to-green-500 hover:rounded-full hover:shadow-lg transition-all duration-300'>Home</a>
-            <a href="#about" className='px-4 py-2 text-white-700 hover:text-white hover:bg-gradient-to-r hover:from-blue-500 hover:to-green-500 hover:rounded-full hover:shadow-lg transition-all duration-300'>About</a>
-            <a href="#service" className='px-4 py-2 text-white-700 hover:text-white hover:bg-gradient-to-r hover:from-blue-500 hover:to-green-500 hover:rounded-full hover:shadow-lg transition-all duration-300'>Services</a>
-            <a href="#project" className='px-4 py-2 text-white-700 hover:text-white hover:bg-gradient-to-r hover:from-blue-500 hover:to-green-500 hover:rounded-full hover:shadow-lg transition-all duration-300'>Projects</a>
-            <a href="#contact" className='px-4 py-2 text-white-700 hover:text-white hover:bg-gradient-to-r hover:from-blue-500 hover:to-green-500 hover:rounded-full hover:shadow-lg transition-all duration-300'>Contact</a>
+    <nav className='bg-black text-white px-6 md:px-16 lg:px-24'>
+      <div className='flex items-center justify-between py-4 relative'>
+        {/* Logo */}
+        <div className='text-2xl font-bold z-10'>Anujith</div>
+
+        {/* Centered Links (Desktop) */}
+        <div className='hidden md:flex absolute left-1/2 transform -translate-x-1/2 space-x-6'>
+          {navLinks.map(link => (
+            <a
+              key={link}
+              href={`#${link.toLowerCase()}`}
+              className='px-4 py-2 hover:text-white hover:bg-gradient-to-r hover:from-blue-500 hover:to-green-500 hover:rounded-full hover:shadow-lg transition-all duration-300'
+            >
+              {link}
+            </a>
+          ))}
         </div>
-        <a href="#contact"><button className='bg-gradient-to-r from-blue-500 to-green-500 text-white hidden md:inline transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full'>Connect Me</button></a>
+
+        {/* Connect Button (Right) */}
+        <div className='hidden md:flex z-10'>
+          <a href="#contact">
+            <button className='bg-gradient-to-r from-blue-500 to-green-500 text-white px-4 py-2 rounded-full transform transition-transform duration-300 hover:scale-105'>
+              Connect Me
+            </button>
+          </a>
         </div>
-        
+
+        {/* Hamburger (Mobile) */}
+        <div className='md:hidden z-10'>
+          <button onClick={() => setIsOpen(!isOpen)} aria-label="Toggle Menu">
+            {isOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Dropdown Menu */}
+      {isOpen && (
+        <div className='flex flex-col space-y-3 md:hidden pb-4'>
+          {navLinks.map(link => (
+            <a
+              key={link}
+              href={`#${link.toLowerCase()}`}
+              className='px-4 py-2 text-center hover:text-white hover:bg-gradient-to-r hover:from-blue-500 hover:to-green-500 hover:rounded-full hover:shadow-lg transition-all duration-300'
+            >
+              {link}
+            </a>
+          ))}
+        </div>
+      )}
     </nav>
-    </>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;
