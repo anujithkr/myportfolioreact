@@ -14,8 +14,8 @@ function Hero() {
         I build full-stack applications that are fast, responsive, and tailored to real user needs.
         </p>
         <div className='mt-8 space-x-4'>
-            <a href="#contact"><button className='bg-gradient-to-r from-green-200 to-blue-500 text-white hidden md:inline transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full'>Contact with me</button></a>
-            <a href="/AnujithKRResume.pdf" target='_blank' rel="noopener noreferrer"><button className='bg-gradient-to-r from-pink-500 to-yellow-500 text-white hidden md:inline transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full'>Resume</button></a>
+            <a href="#contact"><button className='bg-gradient-to-r from-green-200 to-blue-500 text-white  md:inline transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full'>Contact with me</button></a>
+            <a href="/AnujithKRResume.pdf" target='_blank' rel="noopener noreferrer"><button className='bg-gradient-to-r from-pink-500 to-yellow-500 text-white md:inline transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full'>Resume</button></a>
         </div>
     </div>
     </>

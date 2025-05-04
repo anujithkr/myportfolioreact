@@ -3,7 +3,7 @@ import { Menu, X } from 'lucide-react';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const navLinks = ['Home', 'About', 'Services', 'Projects', 'Contact'];
+  const navLinks = ['Home', 'About', 'Service', 'Project', 'Contact'];
 
   return (
     <nav className='bg-black text-white px-6 md:px-16 lg:px-24'>
