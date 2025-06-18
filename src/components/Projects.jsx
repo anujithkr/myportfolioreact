@@ -11,7 +11,7 @@ const projects=[
         name:"E-Kart app",
         technologies:"MERN Stack",
         image:eKart,
-        netlify:"",
+        netlify:"https://e-cartapi.netlify.app/",
     },
     {
         id:2,
