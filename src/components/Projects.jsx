@@ -3,7 +3,8 @@ import hotel from '../assets/food.png'
 import eKart from '../assets/ekart.png'
 import media from '../assets/media.png'
 import quote from '../assets/quote.png'
-
+import zomato from '../assets/zomato.png'
+import counter from '../assets/counter.png'
 const projects=[
     {
         id:1,
@@ -32,6 +33,20 @@ const projects=[
         technologies:"MERN Stack",
         image:quote,
         netlify:"https://randmquotegntr.netlify.app/",
+    },
+      {
+        id:5,
+        name:"Counter App",
+        technologies:"MERN Stack",
+        image:counter,
+        netlify:"https://counterpplication.netlify.app/",
+    },
+    {
+        id:6,
+        name:"Zomato clone",
+        technologies:"MERN Stack",
+        image:zomato,
+        netlify:"https://zomatoonlyclone.netlify.app/",
     }
     
 ]
