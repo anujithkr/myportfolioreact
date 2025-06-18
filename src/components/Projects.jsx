@@ -2,7 +2,7 @@ import React from 'react'
 import hotel from '../assets/food.png'
 import eKart from '../assets/ekart.png'
 import media from '../assets/media.png'
-
+import quote from '../assets/quote.png'
 
 const projects=[
     {
@@ -26,6 +26,13 @@ const projects=[
         image:media,
         netlify:"https://mediaplayerreact.netlify.app/",
     },
+    {
+        id:4,
+        name:"Random Quote",
+        technologies:"MERN Stack",
+        image:quote,
+        netlify:"https://randmquotegntr.netlify.app/",
+    }
     
 ]
 
